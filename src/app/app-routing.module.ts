@@ -8,6 +8,7 @@ import { CalificacionesFinalesComponent } from './calificaciones-finales/calific
 import { CalificacionesParcialesComponent } from './calificaciones-parciales/calificaciones-parciales.component';
 
 const routes: Routes = [
+  {path: '', component: PortalComponent},
   {path: 'login', component: LoginComponent},
   {path: 'portal', component: PortalComponent,
     children: [
