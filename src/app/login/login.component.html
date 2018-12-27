@@ -1,0 +1,10 @@
+<div class="container text-center  main">
+  <h1>Iniciar sesión</h1>
+  <fieldset>
+    <input  [(ngModel)]="noControl" type="text" id="noControl" placeholder="Numero de control">
+  </fieldset>
+  <fieldset>
+    <input [(ngModel)]="pass"  type="password" id="pass" placeholder="Contraseña">
+  </fieldset>
+  <button (click)="login()" class="btn btn-primary" type="button" name="button">Entrar</button>
+</div>

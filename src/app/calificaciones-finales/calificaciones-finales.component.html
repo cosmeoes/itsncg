@@ -1,0 +1,19 @@
+<div *ngIf='datos' class="container text-center" >
+  <h1>Calificaciones Finales</h1>
+  <br/>
+  <table class="table table-hover table-bordered">
+    <thead class="thead-dark">
+      <th>Materia</th>
+      <th>Calificacion</th>
+      <th>Oportunidad</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{dato.nombre}}</td>
+        <td>{{dato.calificaciones}}</td>
+        <td>{{dato.oportunidad}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>{{promedio}}</h2>
+</div>

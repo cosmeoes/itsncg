@@ -1,0 +1,74 @@
+
+<div *ngIf="datosInicio" class="container emp-profile">
+  <form method="post">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-img">
+          <img src="http://148.223.124.178/escolar/{{datosInicio.fotoUrl}}" alt=""/>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="profile-head">
+          <h5>
+            {{datosInicio.nombre}}
+          </h5>
+          <h6>
+            {{datosInicio.matricula}}
+          </h6>
+          <p class="proile-rating">Promedio: <span>{{datosInicio.promedio}}</span></p>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="profile-work text-center">
+          <p>Carrera:<br/>  {{datosInicio.carrera}}</p>
+          <p>Sexo:<br/>  {{datosInicio.sexo}}</p>
+          <p>Curp:<br/> {{datosInicio.curp}}</p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Porcentaje de avance</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{datosInicio.porcentajeAvance}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Turno</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{datosInicio.turno}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Situación</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{datosInicio.situacion}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Creditos cursados</label>
+              </div>
+              <div class="col-md-6">
+                <p>{{datosInicio.creditosC}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

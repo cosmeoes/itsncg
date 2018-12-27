@@ -1,0 +1,23 @@
+<div *ngIf='datos' class="container text-center" >
+  <h1>Calificaciones Parciales</h1>
+  <br/>
+  <select class="form-control" aria-label="ngSelected" [(ngModel)]="materiaSeleccionado" (ngModelChange)="getCalificacionMateria($event)">
+    <option  [ngValue]="undefined"  selected hidden>Selecciona una materia</option>
+    <option *ngFor="let materia of datos.materias" [value]="materia.id">{{materia.nombre}}</option>
+  </select>
+  <table *ngIf="calificaciones" class="table table-hover table-bordered">
+    <thead class="thead-dark">
+      <th>Calificacion</th>
+      <th>Unidad</th>
+      <th>Oportunidad</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fila of calificaciones">
+        <td>{{fila.calificacion}}</td>
+        <td>{{fila.unidad}}</td>
+        <td>{{fila.oportunidad}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
